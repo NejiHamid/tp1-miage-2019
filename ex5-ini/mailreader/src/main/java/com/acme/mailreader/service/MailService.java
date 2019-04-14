@@ -6,8 +6,9 @@ import java.util.List;
 import javax.inject.Singleton;
 
 import com.acme.mailreader.domain.Mail;
-import com.acme.mailreader.presentation.MailInvalideException;
-import com.acme.mailreader.presentation.MailInvalideException.ErreurMail;
+import com.acme.mailreader.utils.MailInvalideException;
+import com.acme.mailreader.utils.MailInvalideException.ErreurMail;
+import com.acme.mailreader.utils.MailSender;
 import com.google.inject.Inject;
 
 public class MailService {
@@ -31,12 +32,12 @@ public class MailService {
 	 *            mail à envoyer
 	 * @throws MailInvalideException si le mail n'est pas valide
 	 * */
-	public void envoyerMail(Mail mail) throws MailInvalideException {
+	public String envoyerMail(Mail mail) throws MailInvalideException {
 		if (mail.getSujet().length() > TAILLE_MAX_SUJET){
 			throw new MailInvalideException(ErreurMail.SUJET_TROP_LONG);
 		}
 		//...
-		sender.envoyerMail(mail);
+		return sender.envoyerMail(mail);
 
 	}
 

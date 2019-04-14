@@ -1,7 +1,6 @@
 # Nom des étudiants de ce binôme 
-(les DEUX noms) : XXXXX et XXXXXX
+(les DEUX noms) :Abdelhamid NEJI et Fatou Aicha Kane
 
-Commentaires éventuels des étudiants : XXXXXX
 
 # Pré-requis 
 * Disposer d'au moins un compte github par binome

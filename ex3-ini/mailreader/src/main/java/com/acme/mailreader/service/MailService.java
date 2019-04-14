@@ -3,20 +3,25 @@ package com.acme.mailreader.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import com.acme.mailreader.domain.Mail;
-import com.acme.mailreader.presentation.MailInvalideException;
-import com.acme.mailreader.presentation.MailInvalideException.ErreurMail;
+import com.acme.mailreader.utils.MailInvalideException;
+import com.acme.mailreader.utils.MailInvalideException.ErreurMail;
+import com.acme.mailreader.utils.MailSender;
 
 public class MailService {
 	
 	private static final int TAILLE_MAX_SUJET = 20;
 	
 	//TODO : injecter par constructeur un sender
-	private MailSender sender;
+	// ajout final car injecter
+	private final MailSender sender;
 	
-	
+	@Inject
 	public MailService(MailSender sender) {
 		super();
+		this.sender = sender;
 	}
 
 	/**

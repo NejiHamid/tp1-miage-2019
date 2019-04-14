@@ -2,7 +2,9 @@ package com.acme.mailreader.domain;
 
 import java.time.Instant;
 
-import com.acme.mailreader.domain.DateIncorrecteException.ErreurDate;
+import com.acme.mailreader.utils.DateIncorrecteException;
+import com.acme.mailreader.utils.DateIncorrecteException.ErreurDate;
+import com.acme.mailreader.utils.InstantConverter;
 
 import cucumber.deps.com.thoughtworks.xstream.annotations.XStreamConverter;
 

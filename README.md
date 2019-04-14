@@ -1,5 +1,5 @@
 # Nom des étudiants de ce binôme 
-(les DEUX noms) :Abdelhamid NEJI et Fatou Aicha Kane
+Abdelhamid NEJI et Fatou Aicha Kane
 
 
 # Pré-requis 
